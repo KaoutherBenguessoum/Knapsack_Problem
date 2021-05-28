@@ -1,0 +1,232 @@
+
+#fenetreAnim{
+	position:relative;
+	width:100%;
+	height:520px;
+
+}
+#memoryContainer {
+	
+	float: right;
+	height: 530px;
+	width: 400px;
+}
+#memory {
+	margin-top:0px;
+	float: right;
+	width: 60%;
+	height: 100%;
+	margin-top:0px;
+	
+}
+#memory2 {
+	margin-top:-500px;
+	float: left;
+	width:  40%;
+	height: 95%;
+}
+
+#File{
+	position: absolute;
+	float: left;
+
+	bottom: 0px;
+	height: 60px;
+	width: 500px;
+	 border-top-style: solid;
+  border-right-style: none;
+  border-bottom-style: solid;
+  border-left-style: none;
+  border-color: black;
+
+}
+#File2{
+	position: absolute;
+	float: left;
+	margin-left: 80px;
+	bottom: 0px;
+	height: 90px;
+	width: 515px;
+}
+#fileWord{
+	position: absolute;
+	background-color: #16996A;
+	width: 60px;
+	height: 30px;
+	bottom: 65px;
+	text-align: center;
+	color: white;
+	border-radius: 5px;
+	margin-left: 15px;
+	padding-top: 10px;
+	font-size: 14px;
+	font-family: monospace;
+	line-height: 1;
+	white-space: normal;
+}
+#MidleContainer{  
+	font-size: 12px;
+	font-family: monospace;
+	 font-style: bold;
+	width: 50px;
+  height: 50px;
+  position: absolute;
+  background: pink;
+  float: center;
+  color: black;
+  margin-top: 3px;
+  border-radius: 10%;
+ 
+	
+}
+#tableauProcessus{
+	position: absolute;
+	float: left;
+	margin-left: 150px;
+	top: 40px;
+	height: 300px;
+	width: 70px;
+
+}
+#tablWord{
+	background-color: #16996A;
+	position:absolute;
+	line-height: 0.5;
+	top: -29px;
+	text-align: center;
+	color: white;
+	width: 190px;
+	height: 25px;
+	padding-top: 7px;
+	margin-left: 58px;
+	border-radius: 5px;
+	border-width: 25px;
+	border-color: #16996A;
+	border-width: 25px;
+	
+	
+
+}
+#processTable th {
+	line-height: 1;
+	white-space: normal;
+	text-align: center;
+	padding-right: 20px;
+	 border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: solid;
+  border-left-style: none;
+  font-family: monospace;
+  
+  color: black;
+  font-size: 14px;
+  border-color:black;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+ 
+ #processTable{
+ 	
+ }
+#processTable td {
+	text-align: center;
+	color: black;
+	height: 20px;
+}
+.available {
+	
+	
+	background-color: #B0FFC1  ;
+}
+
+.unavailable {
+	background-color: #009D8E;
+}
+#block {
+	box-sizing: border-box;
+	border: 1px solid white;
+	width: 190px;
+	padding: 5px;
+	float: right;
+	margin-right: 15px;
+	word-spacing: 10px;
+	text-align: center;
+	color:white;
+	border-radius: 5px;
+}
+#block3{
+	font-style: italic;
+	height: 36px;
+	width: 100%;
+	word-spacing: 5px;
+	 text-indent: 5px;
+	background-color: #006FCC;
+	line-height: 1.3;
+	margin-left: 0px;
+	
+	color: white;
+	  font-weight: 200;
+	border: 1px solid white;
+	padding-top: 10px;
+	
+}
+#blockNumPartition{
+	
+	height: 12px;
+	width: 12px;
+	float: right;
+	margin-right: -20px;
+	margin-top: -20px;
+	text-align: center;
+	padding: 8px;
+	color: black;
+
+}
+#blockSys{
+	text-align: center;
+	padding-top: 5px;
+	border-radius: 5px;
+	box-sizing: border-box;
+	border: 1px solid white;
+	color: white;
+	float: right;
+	margin-right: 15px;
+	width: 190px;
+	height: 25px;
+	font-weight: 400;
+	font-family: monospace;
+	
+	background-color: #B0FFC1;
+}
+#imageCommencer{
+	height: 220px;
+	width: 400px;
+	margin-left: 280px;
+	margin-top: 140px;
+	opacity: 1;
+	position: absolute;
+}
+
+dialog {
+top: 28%;
+width: 400px;  
+height: 200px;
+padding-top: 80px;
+background-color: white;
+text-align: center;
+font-family: monospace;
+font-size: 15px;
+
+
+border: 1px solid rgba(0, 0, 0, 0.3);
+box-shadow: 0 3px 1px rgba(0, 0, 0, 0.3);
+border-top: 5px solid #16996A;
+}
+
+dialog::backdrop{
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.8);
+}

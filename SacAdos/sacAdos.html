@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Sac à dos</title>
+  <!-- Custom fonts for this template-->
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <script src="../js/d3.min.js"></script>
+  <!-- Custom styles for this template-->
+  <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+
+  <script src="sacAdos.js"></script>
+
+</head>
+
+<body id="page-top" >
+ 
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <!-- <i class="fas fa-laugh-wink"></i> -->
+        </div>
+        <div data-intro="Lien vers la page d'accueil" data-step="1" class="sidebar-brand-text mx-3">SacAdos </div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" >
+          <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+          <span>Introduire les informations</span>
+        </a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Informations
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li data-step="2" data-intro="Introduire les informations relatives à la mémoire centrale et la mémoire virtuelle: Le nombre de pages et de cases"
+      class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <img src=".\svg\one.svg"></img>
+          <span>Sac à dos</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">La capacité du sac à dos</h6>
+            <input id="maxw" type=number min=0 placeholder="Capacité" class="collapse-item"  style="width: 90%;height:34px;padding-top:1%;"></input> 
+
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li data-step="3" data-intro="Initialiser la chaine de référence : Choisir le nombre de pages, puis les introduire dans l'ordre une aprés l'autre " class="nav-item" >
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <img src=".\svg\two.svg"></img>
+          <span>L'ensemble d'objets</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">Le nombre d'objets:</h6>
+              <select id="nbobj" class="collapse-item"  style="width: 90%;height:34px;padding-top:1%;">
+                <option value="0">Nombre d'objets</option>
+                <option value="1">1 objet </option>
+                <option value="2">2 objets</option>
+                <option value="3">3 objets</option>
+                <option value="4">4 objets</option>
+                <option value="5">5 objets</option>
+                <option value="6">6 objets</option>
+                <option value="7">7 objets</option>
+                <option value="8">8 objets</option>
+                <option value="9">9 objets</option>
+                <option value="10">10 objets</option>
+                <option value="11">11 objet </option>
+                <option value="12">12 objets</option>
+                <option value="13">13 objets</option>
+                <option value="14">14 objets</option>
+                <option value="15">15 objets</option>
+                <option value="16">16 objets</option>
+                <option value="17">17 objets</option>
+                <option value="18">18 objets</option>
+                </select>  
+          <div>
+                    <div>
+                      <h6 class="collapse-header" style="position:relative;left:-8px;">informations des objets :</h6>
+                  </div>
+                  <div>
+                      <form id="pss4" name="pss4" style="position:relative;height:100px;">
+                          <div class="btn" id='cpt' style="height:34px;width:34px;position:relative;top:4px;left:8px;border-color:lightgrey;background-color: lightgrey">1</div>
+                          <input class="form-control" id="poids" min="0" name="page" placeholder="poids" style="padding-right:0px;height:34px;position: relative;top: -30px;left:48px;width:70%;" type="number">
+                          <input class="form-control" id="gain" min="0" name="page" placeholder="gain" style="height:34px;position: relative;left:8px;width:70%;top:-24px;margin-right: 0%;" type="number">
+                          <a class="btn btn-success btn-circle btn-sm" href="#" id="ok" style="position: relative;left:152px;top:-54px;">
+                            <i class="fas fa-check"></i>
+                          </a>
+                      </form>
+                  </div>
+          </div>
+          </div>
+          
+        </div>
+      </li>
+      <hr class="sidebar-divider">
+      <!-- Heading -->
+
+
+
+
+
+      <!-- Divider -->
+      
+      <!-- Sidebar Toggler (Sidebar) -->
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column bg-gray-400">
+      <!-- Main Content -->
+      <div id="content">
+    
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <h1 class="h3 mb-0 text-gray-800">Programmation Dynamique</h1>
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+          <ul class="navbar-nav ml-auto">
+  
+                <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                
+    
+                <!-- Nav Item - Alerts -->
+
+                <div class="topbar-divider d-none d-sm-block"></div>
+
+              </ul>
+          <!-- Topbar Navbar -->
+
+        </nav>
+        <!-- End of Topbar -->
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+            <div id="card" class="card cardshadow-lg p-3 mb-5 bg-white rounded" style="top:-6px;">         
+                <svg class="card-image" id="svg" width="1000" style="position:relative;width:100%;height:520px;"
+               viewBox="0 0 967 460" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+               <g id="illustration"> 
+                <text x="50" y="40"  style="font-family: 'Dosis', sans-serif; font-size  : 35; font-weight: 700; fill:#4A4D4C;"  >Le sac des vacances :</text>
+                <line x1="40" y1="60" x2="990" y2="60" stroke="#232121" stroke-opacity="0.85"/>
+                <image xlink:href="img/algeria.png" x="560" y="60" height="380" width="340" style="opacity: 0.2;"/> 
+                <image xlink:href="img/plane.png" x="820" y="120" height="60" width="40" />                     
+                <image xlink:href="img/suitcases.png" x="740" y="120" height="380" width="220" /> 
+                <text x="44" y="100"  style="font-family: 'Roboto', sans-serif; font-size  : 15; font-weight: 200; fill:#817B7B;"  >Avec le début de la nouvelle année, Aymen a décidé de voyager partout </text> 
+                <text x="44" y="125"  style="font-family: 'Roboto', sans-serif; font-size  : 15; font-weight: 200; fill:#817B7B;"  >dans le monde.Il est tellement excité d'atteindre l'un de ses objectifs  </text>
+                <text x="44" y="150"  style="font-family: 'Roboto', sans-serif; font-size  : 15; font-weight: 200; fill:#817B7B;"  >de vie !! Il a tout ce dont il a besoin prêt. Pour faciliter les choses,</text>
+                <text x="44" y="175"  style="font-family: 'Roboto', sans-serif; font-size  : 15; font-weight: 200; fill:#817B7B;"  >Mais les choses ne pourraient jamais être aussi simples qu'ils y paraissent ..</text>
+                <text x="44" y="200"  style="font-family: 'Roboto', sans-serif; font-size  : 15; font-weight: 200; fill:#817B7B;"  >Comme le voyage prendrait beaucoup de temps, Aymen est limité en ne prenant  </text>  
+                <text x="44" y="225"  style="font-family: 'Roboto', sans-serif; font-size  : 15; font-weight: 200; fill:#817B7B;"  >qu'un seul sac ayant un poids spécifique qui ne devrait jamais être dépassé </text>  
+                <text x="44" y="250"  style="font-family: 'Roboto', sans-serif; font-size  : 15; font-weight: 200; fill:#817B7B;"  >et d'une manière qui maximise le gain. son kit de voyage est associé à </text>  
+                <text x="44" y="275"  style="font-family: 'Roboto', sans-serif; font-size  : 15; font-weight: 200; fill:#817B7B;"  >un poids et une importance spécifiques. Aidez-le à définir ce qu’il doit </text>
+                <text x="44" y="300"  style="font-family: 'Roboto', sans-serif; font-size  : 15; font-weight: 200; fill:#817B7B;"  >prendre avec lui.</text>
+                <text x="390" y="390"  style="font-family: 'Dosis', sans-serif; font-size  : 25; font-weight: 700; fill:#4A4D4C;"  >VOUS POUVEZ :</text>  
+                <g id="senario">  
+                 <rect id="sen"x="364" y="416"  fill="#01A46D" width="200" rx="25" height="40"></rect>  
+                 <text x="378" y="440"  style="font-family: 'Montserrat', sans-serif; font-size  : 15; font-weight: 300; fill:white;"  >Introduire un Scénario</text>
+               </g>
+              </g>
+
+               </svg> 
+               <div class="card-footer " style="height:100%;background-color:white; "  >
+                <svg id="chaine" style="top:4px;width:100%" height="34" viewBox="0 0 1007 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <text id="textChaine" x="10" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 18; font-weight: 700; fill:#4A4D4C; visibility:hidden;"  >Table d'objets :</text>  
+                 <g id="G17" style="visibility:hidden;">
+                 <rect x="872" y="16" width="15" height="2" fill="#62757F"/>
+                 <circle id="C17"class="bg-info" cx="901" cy="17" r="20" fill="rgb(133,135,150)"/>
+                 <text id="WG17" x="891" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 14; font-weight: 700; fill:#FFFFFF;"  ></text>  
+                 <text id="VG17"x="891" y="32"  style="font-family: 'Dosis', sans-serif; font-size  : 16; font-weight: 700; fill:#FFFFFF;"  ></text> 
+                </g>
+                 <g id="G16" style="visibility:hidden;">
+                 <rect x="830" y="16" width="15" height="2" fill="#62757F"/>
+                 <circle id="C16" cx="859" cy="17" r="20" fill="rgb(133,135,150)"/>
+                 <text id="WG16" x="848" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 14; font-weight: 700; fill:#FFFFFF;"  ></text>  
+                 <text id="VG16"x="848" y="32"  style="font-family: 'Dosis', sans-serif; font-size  : 16; font-weight: 700; fill:#FFFFFF;"  ></text> 
+                </g>
+                 
+                 <g id="G15" style="visibility:hidden;">
+                 <rect x="788" y="16" width="15" height="2" fill="#62757F"/>
+                 <circle  id="C15" cx="817" cy="17" r="20" fill="rgb(133,135,150)"/>
+                 <text id="WG15" x="806" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 14; font-weight: 700; fill:#FFFFFF;"  ></text>  
+                 <text id="VG15"x="806" y="32"  style="font-family: 'Dosis', sans-serif; font-size  : 16; font-weight: 700; fill:#FFFFFF;"  ></text> 
+                </g>
+                 <g id="G14" style="visibility:hidden;">
+                 <rect x="746" y="16" width="15" height="2" fill="#62757F"/>
+                 <circle id="C14" cx="775" cy="17" r="20" fill="rgb(133,135,150)"/>
+                 <text id="WG14" x="764" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 14; font-weight: 700; fill:#FFFFFF;"  ></text>  
+                 <text id="VG14"x="764" y="32"  style="font-family: 'Dosis', sans-serif; font-size  : 16; font-weight: 700; fill:#FFFFFF;"  ></text> 
+                </g>
+                 <g id="G13" style="visibility:hidden;">
+                 <rect x="704" y="16" width="15" height="2" fill="#62757F"/>
+                 <circle  id="C13" cx="733" cy="17" r="20" fill="rgb(133,135,150)"/>
+                 <text id="WG13" x="721" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 14; font-weight: 700; fill:#FFFFFF;"  ></text>  
+                 <text id="VG13"x="721" y="32"  style="font-family: 'Dosis', sans-serif; font-size  : 16; font-weight: 700; fill:#FFFFFF;"  ></text> 
+                </g>
+                 <g id="G12" style="visibility:hidden;">
+                 <rect x="662" y="16" width="15" height="2" fill="#62757F"/>
+                 <circle id="C12" cx="691" cy="17" r="20" fill="rgb(133,135,150)"/>
+                 <text id="WG12" x="680" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 14; font-weight: 700; fill:#FFFFFF;"  ></text>  
+                 <text id="VG12"x="680" y="32"  style="font-family: 'Dosis', sans-serif; font-size  : 16; font-weight: 700; fill:#FFFFFF;"  ></text> 
+                </g>
+                 <g id="G11" style="visibility:hidden;">
+                 <rect x="620" y="16" width="15" height="2" fill="#62757F"/>
+                 <circle id="C11" cx="649" cy="17" r="20" fill="rgb(133,135,150)"/>
+                 <text id="WG11" x="638" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 14; font-weight: 700; fill:#FFFFFF;"  ></text>  
+                 <text id="VG11"x="638" y="32"  style="font-family: 'Dosis', sans-serif; font-size  : 16; font-weight: 700; fill:#FFFFFF;"  ></text> 
+                </g>
+                 <g id="G10"style="visibility:hidden;" >
+                 <rect x="578" y="16" width="15" height="2" fill="#62757F"/>
+                 <circle  id="C10" cx="607" cy="17" r="20" fill="rgb(133,135,150)"/>
+                 <text id="WG10" x="596" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 14; font-weight: 700; fill:#FFFFFF;"  ></text>  
+                 <text id="VG10"x="596" y="32"  style="font-family: 'Dosis', sans-serif; font-size  : 16; font-weight: 700; fill:#FFFFFF;"  ></text> 
+                </g>
+                 <g id="G9" style="visibility:hidden;">
+                 <rect x="536" y="16" width="15" height="2" fill="#62757F"/>
+                 <circle id="C9" cx="565" cy="17" r="20" fill="rgb(133,135,150)"/>
+                 <text id="WG9" x="554" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 14; font-weight: 700; fill:#FFFFFF;"  ></text>  
+                 <text id="VG9"x="554" y="32"  style="font-family: 'Dosis', sans-serif; font-size  : 16; font-weight: 700; fill:#FFFFFF;"  ></text> 
+                </g>
+                 <g id="G8" style="visibility:hidden;">
+                 <rect x="494" y="16" width="15" height="2" fill="#62757F"/>
+                 <circle  id="C8" cx="523" cy="17" r="20" fill="rgb(133,135,150)"/>
+                 <text id="WG8" x="512" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 14; font-weight: 700; fill:#FFFFFF;"  ></text>  
+                 <text id="VG8"x="512" y="32"  style="font-family: 'Dosis', sans-serif; font-size  : 16; font-weight: 700; fill:#FFFFFF;"  ></text> 
+                </g>
+                 <g id="G7" style="visibility:hidden;">
+                 <rect x="452" y="16" width="15" height="2" fill="#62757F"/>
+                 <circle id="C7" cx="481" cy="17" r="20" fill="rgb(133,135,150)"/>
+                 <text id="WG7" x="470" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 14; font-weight: 700; fill:#FFFFFF;"  ></text>  
+                 <text id="VG7"x="470" y="32"  style="font-family: 'Dosis', sans-serif; font-size  : 16; font-weight: 700; fill:#FFFFFF;"  ></text> 
+                </g>
+                 <g id="G6"style="visibility:hidden;" >
+                 <rect x="412" y="16" width="15" height="2" fill="#62757F"/>
+                 <circle id="C6" cx="441" cy="17" r="20" fill="rgb(133,135,150)"/>
+                 <text id="WG6" x="430" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 14; font-weight: 700; fill:#FFFFFF;"  ></text>  
+                 <text id="VG6"x="430" y="32"  style="font-family: 'Dosis', sans-serif; font-size  : 16; font-weight: 700; fill:#FFFFFF;"  ></text> 
+                </g>
+                 <g id="G5"style="visibility:hidden;" >
+                 <rect x="370" y="16" width="15" height="2" fill="#62757F"/>
+                 <circle  id="C5" cx="399" cy="17" r="20" fill="rgb(133,135,150)"/>
+                 <text id="WG5" x="388" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 14; font-weight: 700; fill:#FFFFFF;"  ></text>  
+                 <text id="VG5"x="388" y="32"  style="font-family: 'Dosis', sans-serif; font-size  : 16; font-weight: 700; fill:#FFFFFF;"  ></text> 
+                </g>
+                 <g id="G4" style="visibility:hidden;">
+                 <rect x="328" y="16" width="15" height="2" fill="#62757F"/>
+                 <circle id="C4" cx="357" cy="17" r="20" fill="rgb(133,135,150)"/>
+                 <text id="WG4" x="346" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 14; font-weight: 700; fill:#FFFFFF;"  ></text>  
+                 <text id="VG4"x="346" y="32"  style="font-family: 'Dosis', sans-serif; font-size  : 16; font-weight: 700; fill:#FFFFFF;"  ></text> 
+                </g>
+                 <g id="G3" style="visibility:hidden;">
+                 <rect x="286" y="16" width="15" height="2" fill="#62757F"/>
+                 <circle id="C3" cx="315" cy="17" r="20" fill="rgb(133,135,150)"/>
+                 <text id="WG3" x="304" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 14; font-weight: 700; fill:#FFFFFF;"  ></text>  
+                 <text id="VG3"x="304" y="32"  style="font-family: 'Dosis', sans-serif; font-size  : 16; font-weight: 700; fill:#FFFFFF;"  ></text> 
+                </g>
+                 <g id="G2"style="visibility:hidden;" >
+                 <rect x="244" y="16" width="15" height="2" fill="#62757F"/>
+                 <circle id="C2" cx="273" cy="17" r="20" fill="rgb(133,135,150)"/>
+                 <text id="WG2" x="262" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 14; font-weight: 700; fill:#FFFFFF;"  ></text>  
+                 <text id="VG2"x="262" y="32"  style="font-family: 'Dosis', sans-serif; font-size  : 16; font-weight: 700; fill:#FFFFFF;"  ></text> 
+                </g>
+                 <g id="G1"style="visibility:hidden;">
+                 <rect x="202" y="16" width="15" height="2" fill="#62757F"/>
+                 <circle id="C1" cx="231" cy="17" r="20" fill="rgb(133,135,150)"/>
+                 <text id="WG1" x="220" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 14; font-weight: 700; fill:#FFFFFF;"  ></text>  
+                 <text id="VG1"x="220" y="32"  style="font-family: 'Dosis', sans-serif; font-size  : 16; font-weight: 700; fill:#FFFFFF;"  ></text> 
+                </g>
+                 <g id="G0"style="visibility:hidden;">
+                 <circle id="C0" cx="189" cy="17" r="20" fill="rgb(133,135,150)"/>
+                 <text id="WG0" x="178" y="16"  style="font-family: 'Dosis', sans-serif; font-size  : 14; font-weight: 700; fill:#FFFFFF;"  ></text>  
+                 <text id="VG0"x="178" y="32"  style="font-family: 'Dosis', sans-serif; font-size  : 16; font-weight: 700; fill:#FFFFFF;"  ></text> 
+                </g>
+                 <g id="suivant" style="visibility:hidden;">  
+                 <path d="M990 34C999.389 34 1007 26.3888 1007 17C1007 7.61116 999.389 0 990 0C980.611 0 973 7.61116 973 17C973 26.3888 980.611 34 990 34Z" fill="#1CC88A"/>
+                 <path d="M994.103 17L981.207 25.7931V17.16V8.20691L994.103 17Z" fill="white"/>
+                 <path d="M981.207 26.3793C981.113 26.3793 981.019 26.357 980.933 26.3113C980.741 26.2099 980.621 26.0106 980.621 25.7931V8.20691C980.621 7.98942 980.741 7.79011 980.933 7.6887C981.125 7.5867 981.358 7.60077 981.538 7.7227L994.434 16.5158C994.594 16.6248 994.69 16.806 994.69 17C994.69 17.194 994.594 17.3752 994.433 17.4842L981.537 26.2773C981.438 26.3447 981.322 26.3793 981.207 26.3793ZM981.793 9.31659V24.684L993.063 17L981.793 9.31659Z" fill="white"/>
+                 <path d="M999.379 8.20691H996.448V25.7931H999.379V8.20691Z" fill="white"/>
+                 <path d="M999.966 26.3793H995.862V7.6207H999.966V26.3793ZM997.034 25.2069H998.793V8.79311H997.034V25.2069Z" fill="white"/>
+               </g> 
+               <g id="chaineText" style="visibility:hidden;">
+                
+                </g>
+               </svg>
+             </div>       
+              </div>
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer 
+      <footer class="sticky-footer bg-white"
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Your Website 2019</span>
+          </div>
+        </div>
+      </footer>
+       End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+  <!-- Logout Modal-->
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="../js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+
+  <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+</body>
+
+</html>
